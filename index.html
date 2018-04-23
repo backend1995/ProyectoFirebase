@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lista De Taller De Circo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/convalidaciones.js"></script>
+    
+<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCB1FaVR1l9Yp6Hwe896ijDokba3zPVqLE",
+    authDomain: "tallercirco-24aee.firebaseapp.com",
+    databaseURL: "https://tallercirco-24aee.firebaseio.com",
+    projectId: "tallercirco-24aee",
+    storageBucket: "tallercirco-24aee.appspot.com",
+    messagingSenderId: "769742875050"
+  };
+  firebase.initializeApp(config);
+</script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <!-- tabla con convalidaciones -->
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Alumnos Del Taller De Circo</th>
+                            </tr>
+                            <tr>
+                                <th>Rut</th>
+                                <th>Nombre</th>
+                                <th>Asistencia</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-sm-1">
+                    <!-- //espacio entre tabla y ingreso de datos -->
+                </div>
+                <div class="col-sm-4">
+                    <!-- //formulario para ingresar datos a la BD -->
+                    <form id="form-convalidaciones">
+                        <div class="form-group">
+                            <label for="rut">Rut</label>
+                            <br/>
+                            <input type="text" class="form-control"  name="rut-a" value="" id="rut-a"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <br/>
+                            <input type="text" class="form-control" name="nombre-a" value="" id="nombre-a"/>
+                        </div>
+                        <div class="form-group">
+                                <label for="asistencia">Asistencia</label>
+                                <br/>
+                                <input type="text" class="form-control" name="asistencia-a" value="" id="asistencia-a"/>
+                            </div>
+                            <input type="submit" name="" value="crear Lista De Clase"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
